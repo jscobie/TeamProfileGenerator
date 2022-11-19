@@ -1,7 +1,7 @@
 # Credit for .gitignore file used: https://github.com/github/gitignore/blob/main/Node.gitignore
 # Posted to Slack channel for class by TA Vince Shury
 
-AA_Provided_files/
+_provided_files/
 .DS_Store/
 node_modules/
 
