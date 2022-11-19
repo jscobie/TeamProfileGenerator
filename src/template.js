@@ -5,7 +5,7 @@ const generateTeam = team => {
         return `
         <div class="card employee card">
             <div class="card-header bg-primary text-white">
-                <h2 class="card-title">${manger.getName()}</h2>
+                <h2 class="card-title">${manager.getName()}</h2>
                 <h3 class="card-title"><i class="fa-solid fa-mug-saucer" mr-2></i>${manager.getRole()}</h3>
             </div>
             <div class="card-body">
@@ -64,12 +64,12 @@ const generateTeam = team => {
         .map(manager => generateManager(manager))
     );
     html.push(team
-        .filer(employee => employee.getRole() === 'Engineer')
+        .filter(employee => employee.getRole() === 'Engineer')
         .map(engineer => generateEngineer(engineer))
         .join('')
     );
     html.push(team
-        .filer(employee => employee.getRole() === 'Intern')
+        .filter(employee => employee.getRole() === 'Intern')
         .map(intern => generateEngineer(intern))
         .join('')
     );

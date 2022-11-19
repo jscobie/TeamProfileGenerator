@@ -115,7 +115,7 @@ function teamApp () {
         {
             type: 'input',
             name: 'internSchool',
-            message: 'What is the interns Github username?'
+            message: 'What school does the intern attend?'
         }    
     ]).then(answers => {
         const intern = new Intern(answers.internName, answers.internID, answers.internEmail, answers.internGithub);
