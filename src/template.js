@@ -3,13 +3,13 @@ const generateTeam = team => {
     // create manager card(s)
     const generateManager = manager => {
         return `
-        <div class="card employee card">
-            <div class="card-header bg-primary text-white">
+        <div class="card employee-card">
+            <div class="card-header bg-danger text-white">
                 <h2 class="card-title">${manager.getName()}</h2>
                 <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>${manager.getRole()}</h3>
             </div>
             <div class="card-body">
-                <ul class="list group">
+                <ul class="list-group">
                     <li class="list-group-item">ID: ${manager.getId()}</li>
                     <li class="list-group-item">Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></li>
                     <li class="list-group-item">Office Number: ${manager.getOfficeNumber()}</li>
@@ -87,6 +87,7 @@ const htmlHead = `
     <title>The Team</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Nabla&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c502137733.js"></script>
 </head>
 `
@@ -95,8 +96,8 @@ const bodyTop = `
     <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 jumbotron mb-3 team-heading bg-danger">
-                <h1 class="text-center text-light">My Team</h1>
+            <div class="col-12 jumbotron mb-3 team-heading bg-primary">
+                <h1 class="text-center text-light font-type">My Team</h1>
             </div>
         </div>
     </div>
