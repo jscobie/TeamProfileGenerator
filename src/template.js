@@ -6,7 +6,7 @@ const generateTeam = team => {
         <div class="card employee card">
             <div class="card-header bg-primary text-white">
                 <h2 class="card-title">${manager.getName()}</h2>
-                <h3 class="card-title"><i class="fa-solid fa-mug-saucer" mr-2></i>${manager.getRole()}</h3>
+                <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>${manager.getRole()}</h3>
             </div>
             <div class="card-body">
                 <ul class="list group">
@@ -22,38 +22,38 @@ const generateTeam = team => {
     // create engineer card(s)
     const generateEngineer = engineer => {
         return `
-        <div class="card employee card">
-            <div class="card-header bg-primary text-white">
+    <div class="card employee-card">
+        <div class="card-header bg-success text-white">
                 <h2 class="card-title">${engineer.getName()}</h2>
-                <h3 class="card-title"><i class="fa-solid fa-glasses mr-2></i>${engineer.getRole()}</h3>
-            </div>
-            <div class="card-body">
-                <ul class="list group">
-                    <li class="list-group-item">ID: ${engineer.getId()}</li>
-                    <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
-                    <li class="list-group-item">Github: <a href="https://github.com/${engineer.getGithub()}" target="_blank" rel="noopener noreferrer">${engineer.getGithub()}</a></li>
-                </ul>
-            </div>
+                <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>${engineer.getRole()}</h3>
         </div>
+        <div class="card-body">
+            <ul class="list-group">
+                <li class="list-group-item">ID: ${engineer.getId()}</li>
+                <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
+                <li class="list-group-item">GitHub: <a href="https://github.com/${engineer.getGithub()}" target="_blank" rel="noopener noreferrer">${engineer.getGithub()}</a></li>
+            </ul>
+        </div>
+    </div>
         `;
     };
 
     // create intern card(s)
     const generateIntern = intern => {
         return `
-        <div class="card employee card">
-            <div class="card-header bg-primary text-white">
-                <h2 class="card-title">${intern.getName()}</h2>
-                <h3 class="card-title"><i class="fa-solid fa-graduation-cap mr-2></i>${intern.getRole()}</h3>
-            </div>
-            <div class="card-body">
-                <ul class="list group">
-                    <li class="list-group-item">ID: ${intern.getId()}</li>
-                    <li class="list-group-item">Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
-                    <li class="list-group-item">School: ${intern.getSchool()}</li>
-                </ul>
-            </div>
+    <div class="card employee-card">
+        <div class="card-header bg-info text-white">
+            <h2 class="card-title">${intern.getName()}</h2>
+            <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>${intern.getRole()}</h3>
         </div>
+        <div class="card-body">
+            <ul class="list-group">
+                <li class="list-group-item">ID: ${intern.getId()}</li>
+                <li class="list-group-item">Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
+                <li class="list-group-item">School: ${intern.getSchool()}</li>
+            </ul>
+        </div>
+    </div>
         `;
     };
 
@@ -70,7 +70,7 @@ const generateTeam = team => {
     );
     html.push(team
         .filter(employee => employee.getRole() === 'Intern')
-        .map(intern => generateEngineer(intern))
+        .map(intern => generateIntern(intern))
         .join('')
     );
 
@@ -88,13 +88,14 @@ const htmlHead = `
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/c502137733.js"></script>
-</head>`
+</head>
+`
 
 const bodyTop = `
     <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 jumbotron mb-3 team-heading bg-success">
+            <div class="col-12 jumbotron mb-3 team-heading bg-danger">
                 <h1 class="text-center text-light">My Team</h1>
             </div>
         </div>
@@ -110,10 +111,10 @@ const bodyBottom = `
     </body>
 </html>`
 
-// Complete built of HTML page
+// Complete build of HTML page for html output
 module.exports = team => {
-    return `${htmlHead}\n
-            ${bodyTop}\n
-            ${generateTeam(team)}\n
+    return `${htmlHead}
+            ${bodyTop}
+            ${generateTeam(team)}
             ${bodyBottom}`
 }

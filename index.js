@@ -118,7 +118,7 @@ function teamApp () {
             message: 'What school does the intern attend?'
         }    
     ]).then(answers => {
-        const intern = new Intern(answers.internName, answers.internID, answers.internEmail, answers.internGithub);
+        const intern = new Intern(answers.internName, answers.internID, answers.internEmail, answers.internSchool);
         teamArray.push(intern);
         createTeam();
     });
