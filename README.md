@@ -11,7 +11,7 @@ I also used Jest as a method to complete testing and use the TDD process of buil
 
 [Github Repository Link](https://github.com/jscobie/TeamProfileGenerator)<br>
 [Deployed page Link](https://jscobie.github.io/TeamProfileGenerator/)<br>
-[Video demonstration of the test, user questions, and index.html creation](https://drive.google.com/file/d/1E_T4lwwWNdwDFL27LAdMjxSkmV8jDOGs/view)
+[Video demonstration of the test, user questions, and index.html creation](https://drive.google.com/file/d/1OEiRnB_qNIyO3_RGcyBAvGMf5J0Fafo9/view)
 
 Screenshot of application created HTML page:<br>
 ![HTML webpage created during video demonstration](./assets/mod10ScreenCapture.PNG)
