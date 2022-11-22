@@ -9,13 +9,12 @@ This project was built to allow me to showcase Module 10's topics of Object Orie
 
 I also used Jest as a method to complete testing and use the TDD process of building code through a testing method. 
 
-Github Repository Link: https://github.com/jscobie/TeamProfileGenerator
+[Github Repository Link](https://github.com/jscobie/TeamProfileGenerator)<br>
+[Deployed page Link](https://jscobie.github.io/TeamProfileGenerator/)<br>
+[Video demonstration of the test, user questions, and index.html creation](https://drive.google.com/file/d/1E_T4lwwWNdwDFL27LAdMjxSkmV8jDOGs/view)
 
-Deployed page Link: https://jscobie.github.io/TeamProfileGenerator/
-
-The following video demonstrates the application functionality:
-
-![Video of testing and application running](./assets/media/weather-forecast.gif)
+Screenshot of application created HTML page:<br>
+![HTML webpage created during video demonstration](./assets/mod10ScreenCapture.PNG)
 
 ## Table of Contents
 

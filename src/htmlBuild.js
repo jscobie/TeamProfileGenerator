@@ -6,7 +6,7 @@ const generateTeam = team => {
         <div class="card employee-card">
             <div class="card-header bg-danger text-white">
                 <h2 class="card-title">${manager.name}</h2>
-                <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>${manager.role}</h3>
+                <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>${manager.getRole()}</h3>
             </div>
             <div class="card-body">
                 <ul class="list-group">
@@ -25,7 +25,7 @@ const generateTeam = team => {
     <div class="card employee-card">
         <div class="card-header bg-success text-white">
                 <h2 class="card-title">${engineer.name}</h2>
-                <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>${engineer.role}</h3>
+                <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>${engineer.getRole()}</h3>
         </div>
         <div class="card-body">
             <ul class="list-group">
@@ -44,7 +44,7 @@ const generateTeam = team => {
     <div class="card employee-card">
         <div class="card-header bg-info text-white">
             <h2 class="card-title">${intern.name}</h2>
-            <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>${intern.role}</h3>
+            <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>${intern.getRole()}</h3>
         </div>
         <div class="card-body">
             <ul class="list-group">
@@ -84,7 +84,7 @@ const htmlHead = `
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>The Team</title>
+    <title>My Team</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Nabla&display=swap" rel="stylesheet">

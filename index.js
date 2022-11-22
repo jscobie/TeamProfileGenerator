@@ -125,7 +125,7 @@ function teamApp () {
     }
 
     function htmlFileCreate() {
-        console.log('Your team page is created! Location: ./src/team.html');
+        console.log('Your team page is created! Location: ./src/index.html');
         fs.writeFileSync(outputPath, generateTeam(theTeam), 'UTF-8')
     }
 
