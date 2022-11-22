@@ -24,24 +24,6 @@ describe('Employee',()  => {
         expect(employeeTest.email).toBe(email);
     })
     
-    test('Test the getName function is able to return the name', () => {
-        const name = 'Jacob';
-        const employeeTest = new Employee('Jacob', '3', 'test@contoso.com');
-        expect(employeeTest.getName()).toBe(name);
-    })
-    
-    test('Test the getID function is able to return the ID', () => {
-        const id = '3';
-        const employeeTest = new Employee('Jacob', '3', 'test@contoso.com');
-        expect(employeeTest.getId()).toBe(id);
-    })
-    
-    test('Test the getEmail function is able to return the email', () => {
-        const email = 'test@contoso.com';
-        const employeeTest = new Employee('Jacob', '3', 'test@contoso.com');
-        expect(employeeTest.getEmail()).toBe(email);
-    })
-    
     test('Can we use the getRole function to return the employee role', () => {
         const role = 'Employee';
         const employeeTest = new Employee('Jacob', '3', 'test@contoso.com');

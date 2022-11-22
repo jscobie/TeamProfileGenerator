@@ -5,11 +5,11 @@ const inquirer = require('inquirer');
 const path = require('path');
 const fs = require('fs');
 const output_dir = path.resolve(__dirname, 'dist');
-const outputPath = path.join(output_dir, 'team.html');
-const generateTeam = require('./src/template');
+const outputPath = path.join(output_dir, 'index.html');
+const generateTeam = require('./src/htmlBuild');
 
 // initialize the array to store responses
-teamArray = [];
+theTeam = [];
 
 // This is the main function, it handles the questions for the employees through the use of Inquirer to ask questions to the user
 function teamApp () {
@@ -61,7 +61,7 @@ function teamApp () {
         }    
     ]).then(answers => {
         const manager = new Manager(answers.managerName, answers.managerID, answers.managerEmail, answers.managerOfficeNumber);
-        teamArray.push(manager);
+        theTeam.push(manager);
         createTeam();
     });
     }
@@ -90,7 +90,7 @@ function teamApp () {
         }    
     ]).then(answers => {
         const engineer = new Engineer(answers.engineerName, answers.engineerID, answers.engineerEmail, answers.engineerGithub);
-        teamArray.push(engineer);
+        theTeam.push(engineer);
         createTeam();
     });
     }
@@ -119,14 +119,14 @@ function teamApp () {
         }    
     ]).then(answers => {
         const intern = new Intern(answers.internName, answers.internID, answers.internEmail, answers.internSchool);
-        teamArray.push(intern);
+        theTeam.push(intern);
         createTeam();
     });
     }
 
     function htmlFileCreate() {
         console.log('Your team page is created! Location: ./src/team.html');
-        fs.writeFileSync(outputPath, generateTeam(teamArray), 'UTF-8')
+        fs.writeFileSync(outputPath, generateTeam(theTeam), 'UTF-8')
     }
 
     createTeam();
